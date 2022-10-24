@@ -2,4 +2,4 @@ from django.shortcuts import render
 
 # Create your views here.
 def review(request):
-    print("Latha")
+    return render(request,"review.html")
