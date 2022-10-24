@@ -3,7 +3,11 @@
         <title> Form Handling</title>
     </head>
     <body>
-        <form>
+        <form method="post">
+            {% csrf_token %}
+            {% if has_error %}
+            <p> This form is invalid.Please enter a valid username</p>
+            {% endif %}
             <label for="username">Your Name</label>
             <input id="username" name="username" type="text">
             <button type="submit">Submit</button>
